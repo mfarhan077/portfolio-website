@@ -1,0 +1,29 @@
+h1{
+  color: rgb(192, 30, 30);
+}
+
+P {
+  color: rgb(10, 6, 21);
+}
+h2 {
+  color: rgb(134, 65, 104);
+}
+
+body {
+background-color: #ff0;
+}
+button {
+  background-color: rgb(192, 30, 30);
+  color: white;
+}
+label {
+  color: rgb(192, 30, 30);
+}
+
+input {
+  background-color: rgb(230, 230, 230);
+}
+name {
+  color: rgb(12, 231, 12);
+}
+

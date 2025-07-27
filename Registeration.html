@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<link rel="stylesheet" href="/new.css">
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form action="submit_form.php" method="post">
+            <label>Full Name:</label>
+            <input type="text" name="fullname" required>
+
+            <label>Date of Birth:</label>
+            <input type="date" name="dob" required>
+
+            <label>Gender:</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" required>
+
+            <label>Course:</label>
+            <select name="course">
+                <option value="CS">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="BBA">Business Administration</option>
+            </select>
+
+            <label>Student ID:</label>
+            <input type="text" name="student_id" required>
+
+            <label>Address:</label>
+            <textarea name="address" rows="3"></textarea>
+
+            <label>Username:</label>
+            <input type="text" name="username" required>
+
+            <label>Password:</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
