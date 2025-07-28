@@ -3,37 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farhan Portfolio</title>
-  <link rel="stylesheet" href="tas1.css" />
+  <title>Farhan zafar As a frontend web developer </title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-                        <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+
 
   <!-- Navbar -->
   <header>
    
 
     <nav>
-      <h2>Farhan</h2>
+      
+      <h2><b></b>Farhan Zafar</h2></b></h2>
       <ul>
+         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+         <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   <!-- Hero Section -->
   <section id="hero">
-    <h1>Hi, I'm Farhan</h1>
-    <p>Beginner Frontend Web Developer</p>
-    <img src="edit.jpg" alt="Farhan's Photo" class="profile-pic" />
+    <div class="hero-content">
+      <div class="profile-wrapper">
+  <img src="after.jpg" alt="Farhan's Photo" class="profile-pic" />
+</div>
+   <h1 class="fade-in" style="animation-delay: 0.5s">Hi, I'm <span class="highlight">Farhan Zafar</span></h1>
+<h4 class="fade-in" style="animation-delay: 0.8s">Frontend Developer & JavaScript Enthusiast</h4>
+<p class="fade-in" style="animation-delay: 1.0s"></p>
+
+    </div>
   </section>
+
+<!-- Home Section -->
+<section id="home" class="reveal home-section">
+  <h2>🏠 Welcome to My Digital Space</h2>
+  <p>
+    I'm Farhan Zafar — passionate about building interactive and elegant web experiences.
+    <br />
+    This space is dedicated to my journey, projects, and ideas.
+  </p>
+  <a href="#projects" class="hero-btn">Explore Projects</a>
+</section>
+
+
 
   <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>I am a beginner learning web development.
+    <h2  class="fade-in" style="animation-delay: 2.0s">About Me</h2>
+    <p class="fade-in" style="animation-delay: 2.0s">I am a beginner learning web development.
    My goal is to build creative and visually engaging websites.
    I want to combine design and functionality in unique ways.
    I'm also exploring how to use AI tools to enhance my projects.
@@ -72,6 +94,14 @@
     <p>Projects coming soon...</p>
   </section>
 
+  <!-- CV Section -->
+<section id="cv" class="reveal cv-section">
+  <h2>📄 My Resume / CV</h2>
+  <p>You can view or download my latest resume below:</p>
+  <a href="Farhan_Resume.pdf" target="_blank" class="hero-btn">Download CV</a>
+</section>
+
+
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
@@ -88,6 +118,6 @@
     <p>&copy; 2025 Farhan. All rights reserved.</p>
   </footer>
 
-  <script src="jscript.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
