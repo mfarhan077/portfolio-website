@@ -1,123 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farhan zafar As a frontend web developer </title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhan zafar Frontend Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</html>
 </head>
 <body>
-
-
-  <!-- Navbar -->
-  <header>
-   
-
-    <nav>
-      
-      <h2><b></b>Farhan Zafar</h2></b></h2>
-      <ul>
-         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-         <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<!-- 🟢 Professional Header Start -->
+<header class="main-header" data-aos="fade-down">
+    <nav class="navbar">
+        <div class="logo" data-aos="fade-right" data-aos-delay="100">
+            <img src="logofz.jpg" alt="Farhan Logo" style="height: 40px; width:60px; object-fit:contain; vertical-align:middle; display:block; margin: 0 auto 0 0;">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link" data-aos="fade-down" data-aos-delay="200">Home</a></li>
+                        <li><a href="#about" class="nav-link" data-aos="fade-down" data-aos-delay="300">About</a></li>
+            <li><a href="#work" class="nav-link" data-aos="fade-down" data-aos-delay="250">Work</a></li>
+                        <li><a href="#contact" class="nav-link" data-aos="fade-down" data-aos-delay="350">Contact</a></li>
+        </ul>
+        <div class="menu-icons">
+            <div class="menu-toggle" id="menu-toggle" title="Open Menu" data-aos="fade-left" data-aos-delay="400">☰</div>
+            <div id="theme-toggle" class="theme-toggle" title="Toggle Theme" data-aos="fade-left" data-aos-delay="450">🌙</div>
+        </div>
     </nav>
-  </header>
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <div class="profile-wrapper">
-  <img src="after.jpg" alt="Farhan's Photo" class="profile-pic" />
-</div>
-   <h1 class="fade-in" style="animation-delay: 0.5s">Hi, I'm <span class="highlight">Farhan Zafar</span></h1>
-<h4 class="fade-in" style="animation-delay: 0.8s">Frontend Developer & JavaScript Enthusiast</h4>
-<p class="fade-in" style="animation-delay: 1.0s"></p>
-
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+                <a href="#work" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
     </div>
-  </section>
+</header>
 
-<!-- Home Section -->
-<section id="home" class="reveal home-section">
-  <h2>🏠 Welcome to My Digital Space</h2>
-  <p>
-    I'm Farhan Zafar — passionate about building interactive and elegant web experiences.
-    <br />
-    This space is dedicated to my journey, projects, and ideas.
-  </p>
-  <a href="#projects" class="hero-btn">Explore Projects</a>
+<!-- 🟢 Professional Header End -->
+
+
+
+<script>
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+<!-- 🔴 Header Section End -->
+
+</style>
+<!-- 🟢 Hero Section Start -->
+<section id="home" class="hero-section" data-aos="fade-up" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 60vh; padding-top: 40px;">
+    <div class="hero-image" style="margin-bottom: 24px;">
+        <img src="after.jpg" alt="Farhan Profile Photo" style="border-radius: 50%; box-shadow: 0 8px 32px rgba(0,0,0,0.25); width: 180px; height: 180px; object-fit: cover; background: #23272b;">
+    </div>
+    <div class="hero-content" style="text-align: center;">
+        <h1 style="margin-bottom: 12px;">Hi, I'm Farhan</h1>
+        <p style="margin-bottom: 24px;">I design clean and user-focused Web Development</p>
+        <div class="hero-buttons" style="display: flex; gap: 16px; justify-content: center;"></div>
+            <a href="#work" class="btn-primary">View Work</a>
+            <a href="#contact" class="btn-secondary">Contact Me</a>
+        </div>
+    </div>
 </section>
 
+<!-- 🔴 Hero Section End -->
 
+<!-- 🟢 About Me Section Start -->
+<section id="about" class="about-section" data-aos="fade-up">
+  <h2>About Me</h2>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2  class="fade-in" style="animation-delay: 2.0s">About Me</h2>
-    <p class="fade-in" style="animation-delay: 2.0s">I am a beginner learning web development.
-   My goal is to build creative and visually engaging websites.
-   I want to combine design and functionality in unique ways.
-   I'm also exploring how to use AI tools to enhance my projects.
-   With consistent learning, I aim to become a skilled web developer.</p>
-  </section>
-
-  <!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project-container">
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>A personal responsive portfolio website using HTML, CSS, and JavaScript.</p>
+  <div class="about-content">
+    <div class="about-text" data-aos="fade-right">
+      <p>
+        I’m Farhan — a creative frontend developer with a passion for crafting intuitive, modern interfaces. I transform complex ideas into elegant digital experiences, blending usability with visual clarity to create solutions that truly connect with users.
+      </p>
+      <p>
+        Tools I use: Figma, Adobe XD, Photoshop, Illustrator, Webflow.
+      </p>
+      <a href="#" class="btn-primary">Download Resume</a>
     </div>
-    <div class="project-card">
-      <h3>Coming Soon</h3>
-      <p>This project will be added later as I learn more frontend development.</p>
+
+    <div class="about-image" data-aos="fade-left">
+      <img src="after.jpg" alt="About Farhan">
     </div>
   </div>
 </section>
+<!-- 🔴 About Me Section End -->
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript (in progress)</li>
-    </ul>
-    
-  </section>
+<!-- 🔴 About Me Section End -->
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Projects coming soon...</p>
-  </section>
+<!-- 🟢 Projects Section Start -->
+<section id="work" class="projects-section" data-aos="fade-up">
+  <h2>Featured Projects</h2>
 
-  <!-- CV Section -->
-<section id="cv" class="reveal cv-section">
-  <h2>📄 My Resume / CV</h2>
-  <p>You can view or download my latest resume below:</p>
-  <a href="Farhan_Resume.pdf" target="_blank" class="hero-btn">Download CV</a>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card" data-aos="zoom-in">
+      <img src="Web details.jpg" alt="Project 1">
+      <h3>Mobile App Redesign</h3>
+      <p>A modern redesign for a shopping app focusing on UX flows.</p>
+    <a href="#" class="btn-primary" style="display: inline-block; background: linear-gradient(90deg, #007bff 0%, #0056b3 100%); color: #fff; padding: 10px 24px; border-radius: 30px; font-weight: 600; box-shadow: 0 4px 16px rgba(0,123,255,0.15); transition: transform 0.2s, box-shadow 0.2s;">View Case Study</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="Market cap.jpg" alt="Project 2">
+      <h3>Dashboard UI</h3>
+      <p>Clean and responsive dashboard interface for analytics.</p>
+    <a href="#" class="btn-primary" style="display: inline-block; background: linear-gradient(90deg, #007bff 0%, #0056b3 100%); color: #fff; padding: 10px 24px; border-radius: 30px; font-weight: 600; box-shadow: 0 4px 16px rgba(0,123,255,0.15); transition: transform 0.2s, box-shadow 0.2s;">View Case Study</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="health cards.jpg" alt="Project 3">
+      <h3>Landing Page Concept</h3>
+      <p>Landing page design with strong visual hierarchy and CTA.</p>
+    <a href="#" class="btn-primary" style="display: inline-block; background: linear-gradient(90deg, #007bff 0%, #0056b3 100%); color: #fff; padding: 10px 24px; border-radius: 30px; font-weight: 600; box-shadow: 0 4px 16px rgba(0,123,255,0.15); transition: transform 0.2s, box-shadow 0.2s;">View Case Study</a>
+    </div>
+  </div>
+</section>
+<!-- 🔴 Projects Section End -->
+<!-- 🟢 Contact Section Start -->
+<section id="contact" class="contact-section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="https://formsubmit.co/farhanzafar00007@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New Portfolio Message">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="thankyou.html">
+    <form class="contact-form" action="#" method="post" data-aos="fade-up" data-aos-delay="100">
+        <div class="form-group floating-label">
+            <input type="text" id="name" name="name" placeholder=" " required>
+            <label for="name">Name</label>
+        </div>
+        <div class="form-group floating-label">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Email</label>
+        </div>
+        <div class="form-group floating-label">
+            <textarea id="message" name="message" placeholder=" " rows="5" required></textarea>
+            <label for="message">Message</label>
+        </div>
+        <button type="submit" class="btn-secondary" style="display: inline-block; background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%); color: #fff; padding: 12px 32px; border: none; border-radius: 30px; font-size: 1rem; font-weight: 600; box-shadow: 0 4px 16px rgba(221,36,118,0.15); transition: background 0.3s, transform 0.2s, box-shadow 0.2s; cursor: pointer;">
+            <span style="vertical-align: middle;">Send Email</span>
+            <svg style="vertical-align: middle; margin-left: 8px;" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M22 2L11 13"></path>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+            </svg>
+        </button>
+            </svg>
+        </button>
+    </form>
 </section>
 
+<!-- 🔴 Contact Section End -->
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Farhan. All rights reserved.</p>
-  </footer>
+<!-- </style>🟢 Footer Section Start -->
+<div style="display: flex; flex-direction: column; align-items: center; margin: 60px 0 0 0;" data-aos="fade-up">
+  <h3 style="color: #021a95; font-size: 1.6rem; font-weight: 600; margin-bottom: 20px; letter-spacing: 0.5px;">
+    Connect With Me
+  </h3>
 
-  <script src="script.js"></script>
+  <div class="social-links" style="display: flex; justify-content: center; gap: 28px;">
+    <a href="https://github.com/mfarhan077" target="_blank" title="GitHub" class="social-icon" style="background: #181c24;" data-aos="zoom-in" data-aos-delay="0">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+    </a>
+
+    <a href="https://www.linkedin.com/in/alpha-reps-5a89aa377" target="_blank" title="LinkedIn" class="social-icon" style="background: #ffffff;" data-aos="zoom-in" data-aos-delay="100">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="filter: invert(27%) sepia(81%) saturate(749%) hue-rotate(181deg) brightness(92%) contrast(92%);">
+    </a>
+
+    <a href="https://www.threads.net/@iem._.farhan" target="_blank" title="Threads" class="social-icon" style="background: #ffffff;" data-aos="zoom-in" data-aos-delay="200">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/threads.svg" alt="Threads" style="filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);">
+    </a>
+
+    <a href="https://www.instagram.com/iem._.farhan" target="_blank" title="Instagram" class="social-icon" style="background: #ffffff;" data-aos="zoom-in" data-aos-delay="300">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="filter: invert(27%) sepia(81%) saturate(749%) hue-rotate(316deg) brightness(92%) contrast(92%);">
+    </a>
+  </div>
+</div>
+
+
+<footer class="footer" style="background: #000; color: #fff; text-align:center; padding: 18px 0 12px 0; margin-top: 32px;">
+    <p style="margin:0; font-size: 1.1rem;">&copy; 2025 Farhan Zafar. All rights reserved.</p>
+</footer>
+
+<!-- 🔴 Footer Section End -->
+<script>
+  // Toggle mobile navigation
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  menuToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+  });
+</script>
+
+ <!-- 🟡 AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- 🟢 Aapka Custom JavaScript -->
+  <script src="script.js"></script> <!-- ✅ This should come last -->
+
+
+
+  
+
 </body>
 </html>
+
+
+
+

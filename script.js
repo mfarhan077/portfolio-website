@@ -1,101 +1,81 @@
-// 1. Form submit par alert show karwana
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault(); // page reload na ho
-  alert("Thank you, Farhan bhai! Your message has been sent.");
+// 🟢 Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
 });
 
-// 2. Scroll par Skills section highlight karwana
-window.addEventListener("scroll", function () {
-  const skills = document.getElementById("skills");
-  const position = skills.getBoundingClientRect().top;
-  const screenHeight = window.innerHeight;
+// 🟢 Active Navbar Link Highlight on Scroll
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
 
-  if (position < screenHeight - 100) {
-    skills.style.transform = "scale(1.05)";
-    skills.style.transition = "all 0.5s ease";
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// 🌙 Dark Mode Toggle
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  // Toggle icon change
+  if (document.body.classList.contains("dark")) {
+    toggle.textContent = "☀️";
   } else {
-    skills.style.transform = "scale(1)";
+    toggle.textContent = "🌙";
   }
 });
 
-// 3. Bonus: Night Mode toggle (optional)
-function toggleDarkMode() {
-  document.body.classList.toggle("dark");
-}
+// ✅ Form Submit to Google Sheet via SheetDB
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
 
-const toggleBtn = document.getElementById("darkModeToggle");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-let darkMode = false;
+      const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+      };
 
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  darkMode = !darkMode;
-  toggleBtn.textContent = darkMode ? "🔆" : "🌙";
-});
-// 4. Profile picture change on hover
-const profilePic = document.querySelector(".profile-pic");          
-profilePic.addEventListener("mouseover", function () {
-  this.src = "edit.jpg"; // New image on hover
-});
-profilePic.addEventListener("mouseout", function () {
-  this.src = "myphoto.jpg"; // Original image on mouse out
-});
-// 5. Smooth scroll to sections
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth"
+      fetch("https://sheetdb.io/api/v1/abc123xyz456", {  // 👉 Replace with your real API URL
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data: data }),
+      })
+        .then((response) => {
+          alert("✅ Message sent successfully!");
+          form.reset();
+        })
+        .catch((error) => {
+          alert("❌ Failed to send message.");
+          console.error(error);
         });
     });
-    }   
-);
-// 6. Responsive navigation toggle
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector("nav ul");
-navToggle.addEventListener("click", function () {
-  navMenu.classList.toggle("active");
-});
-// 7. Highlight active section in navigation
-window.addEventListener("scroll", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav ul li a");
-    
-    sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top < window.innerHeight) {
-        navLinks.forEach(link => link.classList.remove("active"));
-        navLinks[index].classList.add("active");
-        }
-    });
-    }
-);
-// 8. Form validation
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const name = document.querySelector("#name").value;
-  const email = document.querySelector("#email").value;
-  const message = document.querySelector("#message").value;
-
-  if (name && email && message) {
-    alert("Thank you, " + name + "! Your message has been sent.");
-  } else {
-    alert("Please fill out all fields.");
   }
-});
-// 9. Image gallery lightbox effect
-const galleryImages = document.querySelectorAll(".gallery img");
-galleryImages.forEach(image => {
-  image.addEventListener("click", function () {
-    const lightbox = document.createElement("div");
-    lightbox.classList.add("lightbox");
-    const img = document.createElement("img");
-    img.src = this.src;
-    lightbox.appendChild(img);
-    document.body.appendChild(lightbox);
-
-    lightbox.addEventListener("click", function () {
-      document.body.removeChild(lightbox);
-    });
-  });
 });
